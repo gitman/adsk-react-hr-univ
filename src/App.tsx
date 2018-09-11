@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import UserData from './components/UserData/UserData';
+import UserDataModal from './components/UserData/UserDataModal';
 import UserForm from './components/UserForm/UserForm';
 import { dispatch, store } from './store/store';
 import { IAppState } from './store/types';
@@ -36,7 +36,6 @@ class App extends React.Component<{}, IAppState> {
     }
     
     const loginForm = this.state.showLoginForm ? <UserForm dispatch={dispatch} /> : "";
-    const showUserData = this.state.showUserData ? <UserData userData={this.state.userData} dispatch={dispatch} /> : "";
 
     return (
       <div className="App">
@@ -44,7 +43,11 @@ class App extends React.Component<{}, IAppState> {
         <main className="App-main">
           <h1>Welcome to the best way to find a school!</h1>
           {loginForm}
-          {showUserData}
+          <UserDataModal 
+            userData={this.state.userData} 
+            dispatch={dispatch} 
+            showing={this.state.modalShowing}
+            />
         </main>
       </div>
     );

@@ -14,7 +14,7 @@ class UserForm extends React.PureComponent<IDispatch, IUserData> {
       lastname: '',
       password: '',
       username: ''
-    }
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -39,8 +39,7 @@ class UserForm extends React.PureComponent<IDispatch, IUserData> {
       type: ActionTypes.TOGGLE_LOGIN_FORM
     });
     this.props.dispatch({
-      payload: true,
-      type: ActionTypes.SHOW_USER_DATA
+      type: ActionTypes.SHOW_MODAL
     });
     // alert(JSON.stringify(this.state, null, 4));
   }

@@ -1,8 +1,8 @@
 import { ActionTypes, IAppState } from './types';
 
 const initialState:IAppState = {
+    modalShowing: false,
     showLoginForm: true,
-    showUserData: false,
     userData: {
       email: '',
       firstname: '',
@@ -32,12 +32,12 @@ export const userData = (state=initialState.userData, action:any):any => {
     }
 }
 
-export const showUserData = (state=initialState.showUserData, action:any):boolean => {
+export const modalShowing = (state=initialState.modalShowing, action:any):boolean => {
     switch (action.type) {
-        case ActionTypes.SHOW_USER_DATA:
+        case ActionTypes.SHOW_MODAL:
             return true;
-        case ActionTypes.HIDE_USER_DATA:
-            return true;
+        case ActionTypes.HIDE_MODAL:
+            return false;
         default:
             return state;
         }

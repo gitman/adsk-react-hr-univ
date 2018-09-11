@@ -4,8 +4,8 @@ export enum ActionTypes {
     TOGGLE_LOGIN_FORM = "TOGGLE_LOGIN_FORM",
     HIDE_LOGIN_FORM = "HIDE_LOGIN_FORM",
     SET_USER_DATA = "SET_USER_DATA",
-    SHOW_USER_DATA = "SHOW_USER_DATA",
-    HIDE_USER_DATA = "HIDE_USER_DATA"
+    SHOW_MODAL = "SHOW_MODAL",
+    HIDE_MODAL = "HIDE_MODAL"
 }
 
 export interface IDispatch {
@@ -14,7 +14,7 @@ export interface IDispatch {
 
 export interface IAppState {
     showLoginForm: boolean;
-    showUserData: boolean;
+    modalShowing: boolean;
     userData: IUserData;
 }
 
