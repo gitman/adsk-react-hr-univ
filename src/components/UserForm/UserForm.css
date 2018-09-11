@@ -1,0 +1,80 @@
+.UserForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 640px;
+}
+
+.UserForm__row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.UserForm__row-actions {
+  justify-content: flex-end;
+}
+
+.UserForm-label {
+  display: flex;
+  flex: 0 0 100px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.UserForm-input__text,
+.UserForm-input__password,
+.UserForm-input__email {
+  border-top: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+  border-left: 0px solid transparent;
+  outline: 0;
+  flex: 1 0 0;
+  margin: 0;
+  padding: .25em;
+  transition: border-bottom .3s;
+}
+
+.UserForm-input__text:focus,
+.UserForm-input__password:focus,
+.UserForm-input__email:focus {
+  border-bottom: 2px solid #E65100;
+}
+
+.UserForm-action {
+  background: transparent;
+  border: 0px;
+  box-sizing: border-box;
+  margin: 0 0 0 1em;
+  outline: 0;
+  padding: .5em 1em;
+  text-transform: uppercase;
+  transition: box-shadow .3s;
+}
+
+.UserForm-action[disabled] {
+  color: rgba(0, 0, 0, .2);
+}
+
+.UserForm-action::-moz-focus-inner {
+  border: 0;
+}
+
+.UserForm-action:focus,
+.UserForm-action:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.UserForm-action:active {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.UserForm-action:focus[disabled],
+.UserForm-action:hover[disabled] {
+  box-shadow: none;
+}
+
+.UserForm-action:active[disabled] {
+  background-color: transparent;
+}
